@@ -1,0 +1,9 @@
+<div class="row mt-4">
+  <div class="col-md-12">
+    <ul class="list">
+      <li *ngFor="let link of links" class="my-2">
+        <a routerLink="{{ link.path }}">{{ link.title }}</a>
+      </li>
+    </ul>
+  </div>
+</div>

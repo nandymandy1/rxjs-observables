@@ -1,0 +1,66 @@
+<div>
+  <h1 class="display-6">Custom Observables</h1>
+  <br />
+  <div class="row">
+    <div class="col-md-6">
+      <strong>Ex - 01 (Manual)</strong>
+      <hr />
+      <ul
+        [ngClass]="
+          techStatus === 'completed'
+            ? 'completed'
+            : techStatus === 'error'
+            ? 'error'
+            : ''
+        "
+        class="tech-list"
+        id="tech-container"
+      ></ul>
+    </div>
+    <div class="col-md-6">
+      <strong>Ex - 02 (Custom Observable)</strong>
+      <hr />
+      <ul
+        id="tech-container-1"
+        class="tech-list"
+        [ngClass]="
+          techStatus2 === 'completed'
+            ? 'completed'
+            : techStatus2 === 'error'
+            ? 'error'
+            : ''
+        "
+      ></ul>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <strong>Ex - 03 (Random Names)</strong>
+      <p class="bg-light py-2 px-3 border rounded">
+        <strong>Random Names: </strong> 'Narendra', 'Brad Traversy',
+        'Maximillian', 'Shawn', 'Courstro', 'Alex Garret'
+      </p>
+      <hr />
+      <p>
+        Current Name: <strong>{{ names }}</strong>
+      </p>
+      <span
+        class="badge"
+        [ngClass]="
+          nameStatus === 'completed'
+            ? 'bg-success'
+            : nameStatus === 'error'
+            ? 'bg-danger'
+            : 'bg-primary'
+        "
+        >{{
+          nameStatus === "completed"
+            ? "Completed"
+            : nameStatus === "error"
+            ? "Error"
+            : "Recieving"
+        }}</span
+      >
+    </div>
+  </div>
+</div>
